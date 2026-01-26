@@ -24,4 +24,3 @@ Crear una plataforma on:
 - HTML5
 - CSS3
 - JavaScript
-- Git i GitHub
