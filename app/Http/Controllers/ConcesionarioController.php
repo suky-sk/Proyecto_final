@@ -24,6 +24,7 @@ class ConcesionarioController extends Controller
         }
 
         $coches = $query->get();
+        $marcas = Marca::all();
 
 
         foreach ($coches as $coche) {
@@ -31,7 +32,7 @@ class ConcesionarioController extends Controller
         }
 
         // forzar la pagian en ester caso el welcome.blade
-        return view('welcome', compact('coches'));
+        return view('welcome', compact('coches', 'marcas'));
     }
 
     public function show($id)

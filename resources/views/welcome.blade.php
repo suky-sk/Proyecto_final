@@ -23,7 +23,7 @@
     <form action="{{ route('home') }}" method="GET" style="display: flex; gap: 5px;">
         <select name="marca" onchange="this.form.submit()" style="cursor: pointer; min-width: 150px; padding: 8px;">
             <option value="">Todas las marcas</option>
-            @foreach(\App\Models\Marca::all() as $marca)
+            @foreach($marcas as $marca)
                 <option value="{{ $marca->id }}" {{ request('marca') == $marca->id ? 'selected' : '' }}>
                     {{ $marca->nombre }}
                 </option>
