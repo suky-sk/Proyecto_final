@@ -218,7 +218,7 @@
 <section class="hero-section" style="background: linear-gradient(135deg, #0d1433 0%, #2d3b67 100%); color: white; padding: 30px 20px;">
     <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: left;">
         <p style="margin: 0 0 15px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.85;">Tu próximo coche te espera</p>
-        <h1 style="margin: 0 0 15px; font-size: clamp(2.5rem, 4vw, 4rem); line-height: 1.05;">Encuentra tu próximo vehículo</h1>
+        <h1 style="margin: 0 0 15px; font-size: 56px; line-height: 1.05;">Encuentra tu próximo vehículo</h1>
         <p style="margin: 0 0 25px; font-size: 1.1rem; max-width: 700px; opacity: 0.9;">Más de 200 coches disponibles listos para ser explorados. Filtra por marca y encuentra el modelo ideal para ti.</p>
         <a href="#catalogo" class="btn-submit" style="display: inline-block; padding: 14px 30px; background: #f1c40f; color: black; border-radius: 6px; text-decoration: none; font-weight: 700;">Explorar vehículos</a>
     </div>
