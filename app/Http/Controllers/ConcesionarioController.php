@@ -36,9 +36,15 @@ class ConcesionarioController extends Controller
             }
         }
 
-        // buscador de texto
+        // buscador de texto (buscar por modelo o por nombre de marca)
         if ($request->filled('modelo')) {
-            $query->where('modelo', 'LIKE', '%' . $request->modelo . '%'); // % para filtrar da igual donde este la palabra
+            $term = $request->modelo;
+            $query->where(function($q) use ($term) {
+                $q->where('modelo', 'LIKE', '%' . $term . '%')
+                  ->orWhereHas('marca', function($q2) use ($term) {
+                      $q2->where('nombre', 'LIKE', '%' . $term . '%');
+                  });
+            });
         }
 
         $coches = $query->get();
