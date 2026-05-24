@@ -8,12 +8,24 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <style>
+        header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .home-btn { display: inline-flex; align-items: center; gap: 10px; color: inherit; font-weight: 700; }
+        .home-emoji { font-size: 1.05rem; line-height: 1; }
+        .home-text { font-size: 1rem; letter-spacing: .6px; }
+        .nav-icons { display: flex; gap: 14px; align-items: center; }
+        .nav-icons a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: inherit; padding: 6px 8px; border-radius: 8px; }
+        .nav-icons a:hover { background: rgba(0,0,0,0.04); }
+        @media (max-width: 720px) { header { padding: 10px 12px; } .home-text { display: none; } }
+    </style>
+
 </head>
 <body> 
     {{-- header de la pagina --}}
     <header>
         <a href="{{ route('home') }}" class="home-btn" style="text-decoration: none;">
-            🏠 <span>Inicio</span>
+            <span class="home-emoji">🏠</span>
+            <span class="home-text">Inicio</span>
         </a>
 
 
@@ -47,6 +59,10 @@
     <main>
         @yield('content')
     </main>
+
+    <footer style="padding:12px 20px; text-align:center; color: #666; border-top:1px solid rgba(0,0,0,0.06); margin-top:40px;">
+        &copy; {{ date('Y') }} Proyecto Final DAW
+    </footer>
 
 </body>
 </html>
