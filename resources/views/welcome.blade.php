@@ -63,11 +63,12 @@
         min-width: 260px;
         display: flex;
         align-items: center;
-        background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.12);
+        background: #ffffff;
+        border: 1px solid rgba(0,0,0,0.08);
         border-radius: 8px;
         padding: 6px 10px;
         transition: border-color .2s ease, box-shadow .2s ease;
+        color: #111;
     }
 
     .filter-search:hover,
@@ -79,14 +80,14 @@
     .filter-search-icon {
         margin-right: 10px;
         font-size: 1rem;
-        color: rgba(255,255,255,0.7);
+        color: rgba(0,0,0,0.55);
     }
 
     .filter-search input {
         width: 100%;
         border: none;
         background: transparent;
-        color: white;
+        color: #111;
         padding: 10px;
         font-size: 1rem;
         border-radius: 8px;
