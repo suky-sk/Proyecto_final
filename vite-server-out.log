@@ -12,3 +12,11 @@ Re-optimizing dependencies because vite config has changed
   [31m[1mLARAVEL[22m 10.50.2[39m  [2mplugin[22m [1mv1.3.0[22m
 
   [32m➜[39m  [1mAPP_URL[22m: [36mhttp://localhost[39m
+[2m13:45:35[22m [36m[1m[vite][22m[39m [32mfull reload[39m [2mresources\views\welcome.blade.php[22m
+[2m13:46:03[22m [36m[1m[vite][22m[39m [32mfull reload[39m [2mresources\views\welcome.blade.php[22m
+[2m13:46:16[22m [36m[1m[vite][22m[39m [32mfull reload[39m [2mresources\views\welcome.blade.php[22m
+[2m13:47:05[22m [36m[1m[vite][22m[39m [32mfull reload[39m [2mresources\views\welcome.blade.php[22m
+[2m13:47:59[22m [36m[1m[vite][22m[39m [32mfull reload[39m [2mresources\views\welcome.blade.php[22m
+[2m13:48:10[22m [36m[1m[vite][22m[39m [32mfull reload[39m [2mresources\views\welcome.blade.php[22m
+[2m13:50:12[22m [36m[1m[vite][22m[39m [32mfull reload[39m [2mresources\views\welcome.blade.php[22m
+[2m13:51:33[22m [36m[1m[vite][22m[39m [32mfull reload[39m [2mresources\views\welcome.blade.php[22m

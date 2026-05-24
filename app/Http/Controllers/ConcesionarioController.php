@@ -18,6 +18,24 @@ class ConcesionarioController extends Controller
             $query->where('marca_id', $request->marca);
         }
 
+        // filtro por rango de precio
+        if ($request->filled('precio')) {
+            switch ($request->precio) {
+                case '0-15000':
+                    $query->whereBetween('precio', [0, 15000]);
+                    break;
+                case '15000-30000':
+                    $query->whereBetween('precio', [15000, 30000]);
+                    break;
+                case '30000-50000':
+                    $query->whereBetween('precio', [30000, 50000]);
+                    break;
+                case '50000+':
+                    $query->where('precio', '>=', 50000);
+                    break;
+            }
+        }
+
         // buscador de texto
         if ($request->filled('modelo')) {
             $query->where('modelo', 'LIKE', '%' . $request->modelo . '%'); // % para filtrar da igual donde este la palabra
