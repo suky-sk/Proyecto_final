@@ -7,8 +7,8 @@
     .catalogo-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 30px;
-        padding: 40px 20px;
+        gap: 24px;
+        padding: 20px 20px;
         max-width: 1400px;
         margin: 0 auto;
     }
@@ -16,11 +16,11 @@
     .filter-toolbar {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 10px;
         align-items: center;
-        margin: 0 auto 35px auto;
+        margin: 0 auto 16px auto;
         max-width: 1200px;
-        padding: 0 20px;
+        padding: 0 14px;
     }
 
     .filter-pill {
@@ -59,14 +59,14 @@
     }
 
     .filter-search {
-        flex: 1 1 280px;
-        min-width: 220px;
+        flex: 1 1 320px;
+        min-width: 260px;
         display: flex;
         align-items: center;
         background: rgba(255,255,255,0.08);
         border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 999px;
-        padding: 12px 16px;
+        border-radius: 8px;
+        padding: 6px 10px;
         transition: border-color .2s ease, box-shadow .2s ease;
     }
 
@@ -87,8 +87,9 @@
         border: none;
         background: transparent;
         color: white;
-        padding: 10px 0;
+        padding: 10px;
         font-size: 1rem;
+        border-radius: 8px;
     }
 
     .filter-search button {
@@ -213,7 +214,7 @@
 </style>
 
 
-<section class="hero-section" style="background: linear-gradient(135deg, #0d1433 0%, #2d3b67 100%); color: white; padding: 70px 20px;">
+<section class="hero-section" style="background: linear-gradient(135deg, #0d1433 0%, #2d3b67 100%); color: white; padding: 30px 20px;">
     <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: left;">
         <p style="margin: 0 0 15px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.85;">Tu próximo coche te espera</p>
         <h1 style="margin: 0 0 15px; font-size: clamp(2.5rem, 4vw, 4rem); line-height: 1.05;">Encuentra tu próximo vehículo</h1>
@@ -266,7 +267,7 @@
 
 <section class="active-section" id="catalogo">
     <div class="container">
-        <h2 class="section-title" style="margin-top: 30px;">Catálogo</h2>
+        <h2 class="section-title" style="margin-top: 12px;">Catálogo</h2>
 
         {{-- Mostrar mensaje si se añadió correctamente --}}
         @if(session('success'))
