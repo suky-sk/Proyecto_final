@@ -8,7 +8,7 @@ if [ -z "${APP_KEY:-}" ]; then
   exit 1
 fi
 
-mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views bootstrap/cache
+mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache
 find storage bootstrap/cache -type d -exec chmod 775 {} \; || true
 find storage bootstrap/cache -type f -exec chmod 664 {} \; || true
 

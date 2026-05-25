@@ -25,11 +25,11 @@ WORKDIR ${APP_HOME}
 COPY docker/app-entrypoint.sh /usr/local/bin/app-entrypoint
 COPY . .
 
-RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader \
+RUN mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache \
+    && composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader \
     && npm ci --no-audit --no-fund \
     && npm run build \
     && rm -rf node_modules \
-    && mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views bootstrap/cache \
     && chmod +x /usr/local/bin/app-entrypoint
 
 CMD ["app-entrypoint"]

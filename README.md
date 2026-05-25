@@ -33,4 +33,5 @@ docker compose down -v
 - `resources/views`: vistas Blade.
 - `database/migrations`: estructura de la base de datos.
 - `database/seeders/data/concesionario.sql`: datos iniciales.
+- `storage/app/public/Fotos`: imagenes del catalogo.
 - `docker-compose.yml`: app, Vite y MariaDB.
