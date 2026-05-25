@@ -29,7 +29,7 @@
                     @foreach(session('carrito') as $id => $detalles)
                         <div class="product-preview mb-3" style="background: var(--card); border: 1px solid var(--border); padding: 15px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px;">
                             <div style="display: flex; align-items: center;">
-                                 <img src="{{ asset('storage/Fotos/' . $detalles['imagen_path'] . '/1.png') }}"
+                                 <img src="{{ asset('images/Fotos/' . $detalles['imagen_path'] . '/1.png') }}"
                                     alt="{{ $detalles['modelo'] }}"
                                     style="width: 120px; height: 80px; object-fit: cover; margin-right: 15px; border-radius: 4px;">
                                 <div>

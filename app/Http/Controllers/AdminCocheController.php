@@ -39,7 +39,7 @@ class AdminCocheController extends Controller
         ]);
 
         $nombreCarpeta = $coche->id;
-        $rutaDestino = storage_path('app/public/Fotos/' . $nombreCarpeta);
+        $rutaDestino = public_path('images/Fotos/' . $nombreCarpeta);
 
         if(!File::exists($rutaDestino)) {
             File::makeDirectory($rutaDestino, 0755, true);
@@ -96,7 +96,7 @@ public function update(Request $request, $id)
         // ft
         if ($request->hasFile('fotos')) {
             $nombreCarpeta = $coche->id;
-            $rutaDestino = storage_path('app/public/Fotos/' . $nombreCarpeta);
+            $rutaDestino = public_path('images/Fotos/' . $nombreCarpeta);
 
             if(!File::exists($rutaDestino)) {
                 File::makeDirectory($rutaDestino, 0755, true);

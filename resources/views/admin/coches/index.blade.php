@@ -42,7 +42,7 @@
                 @foreach($coches as $coche)
                 <tr>
                     <td>
-                        <img src="{{ asset('storage/Fotos/' . ($coche->imagen_path ?: $coche->id) . '/1.png') }}" {{-- imagen para el coche --}}
+                        <img src="{{ asset('images/Fotos/' . ($coche->imagen_path ?: $coche->id) . '/1.png') }}" {{-- imagen para el coche --}}
                             alt="{{ $coche->modelo }}"
                             style="width: 100px; height: auto;">
                     </td>

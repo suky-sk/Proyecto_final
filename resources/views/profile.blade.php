@@ -100,7 +100,7 @@
                     @foreach(Auth::user()->coches as $coche)
                     <tr style="background: var(--card); border-radius: 8px;">
                         <td style="padding: 15px; display: flex; align-items: center; gap: 15px;">
-                            <img src="{{ asset('storage/Fotos/' . $coche->imagen_path . '/1.png') }}"
+                            <img src="{{ asset('images/Fotos/' . $coche->imagen_path . '/1.png') }}"
                                  alt="Foto coche"
                                  style="width: 80px; height: 50px; object-fit: cover; border-radius: 4px;">
                             <div>

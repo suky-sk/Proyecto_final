@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Coche;
 use App\Models\Marca;
-use Illuminate\Support\Facades\Storage;
-
 class ConcesionarioController extends Controller
 {
     public function index(Request $request)
@@ -69,13 +67,17 @@ class ConcesionarioController extends Controller
 
     private function imagenesDelCoche(Coche $coche): array
     {
-        $carpeta = "Fotos/{$coche->id}";
+        $carpeta = public_path("images/Fotos/{$coche->id}");
 
-        if (! Storage::disk('public')->exists($carpeta)) {
+        if (! file_exists($carpeta) || ! is_dir($carpeta)) {
             return [];
         }
 
-        $imagenes = array_map('basename', Storage::disk('public')->files($carpeta));
+        $archivos = scandir($carpeta);
+        $imagenes = array_filter($archivos, function ($archivo) use ($carpeta) {
+            return $archivo !== '.' && $archivo !== '..' && is_file($carpeta . DIRECTORY_SEPARATOR . $archivo);
+        });
+
         sort($imagenes, SORT_NATURAL);
 
         return array_values($imagenes);

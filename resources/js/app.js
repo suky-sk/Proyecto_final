@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 currentImg = 0;
             }
 
-            const img = '/storage/Fotos/' + imgElement.getAttribute('car-id') + '/' + imgs[currentImg];
+            const img = '/images/Fotos/' + imgElement.getAttribute('car-id') + '/' + imgs[currentImg];
 
             imgElement.setAttribute('src', img);
             imgElement.setAttribute('current-img', currentImg);
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             const carId = imgElement.getAttribute('car-id');
-            const imgPath = '/storage/Fotos/' + carId + '/' + imgs[currentImg];
+            const imgPath = '/images/Fotos/' + carId + '/' + imgs[currentImg];
 
             imgElement.setAttribute('src', imgPath);
             imgElement.setAttribute('current-img', currentImg);

@@ -282,7 +282,7 @@
                 <div class="car-card">
                     <a href="{{ route('coches.show', $coche->id) }}">
                         <img
-                            src="/storage/Fotos/{{ $coche->id }}/1.png"
+                            src="/images/Fotos/{{ $coche->id }}/1.png"
                             alt="Imagen del coche"
                             car-id="{{ $coche->id }}"
                             current-img="0"

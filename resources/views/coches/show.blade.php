@@ -54,7 +54,7 @@
     {{-- ft--}}
     <div class="image-gallery">
         <button class="btn-nav prev" id="btnPrev">‹</button>
-        <img id="mainImage" src="/storage/Fotos/{{ $coche->id }}/1.png" class="main-image" data-photos="{{ $coche->imgs_json }}" onerror="this.src='https://via.placeholder.com/1600x900?text=Sin+Foto'">
+        <img id="mainImage" src="/images/Fotos/{{ $coche->id }}/1.png" class="main-image" data-photos="{{ $coche->imgs_json }}" onerror="this.src='https://via.placeholder.com/1600x900?text=Sin+Foto'">
         <button class="btn-nav next" id="btnNext">›</button>
     </div>
 
@@ -134,7 +134,7 @@
 
         if(photos.length <= 1) { document.querySelectorAll('.btn-nav').forEach(b => b.style.display='none'); }
 
-        const update = () => img.src = `/storage/Fotos/${carId}/${photos[idx]}`;
+        const update = () => img.src = `/images/Fotos/${carId}/${photos[idx]}`;
 
         document.getElementById('btnNext').onclick = () => { if(photos.length){ idx = (idx+1)%photos.length; update(); }};
         document.getElementById('btnPrev').onclick = () => { if(photos.length){ idx = (idx-1+photos.length)%photos.length; update(); }};
