@@ -1,5 +1,3 @@
-import './bootstrap';
-
 document.addEventListener('DOMContentLoaded', function () {
     const botonesSiguiente = document.getElementsByClassName('boton-siguiente');
 

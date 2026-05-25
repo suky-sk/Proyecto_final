@@ -287,6 +287,7 @@
                             car-id="{{ $coche->id }}"
                             current-img="0"
                             data-img="{{ $coche->imgs_json }}"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/800x500?text=Sin+Foto'"
                         >
                     </a>
 
