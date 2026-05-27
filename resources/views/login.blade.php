@@ -22,10 +22,28 @@
         </form>
 
         <div class="login-links">
-            <a href="#">he olvidado mi contraseña</a>
+            <a href="#" id="forgot-password-link">he olvidado mi contraseña</a>
             {{-- nuevos users --}}
             <a href="{{ route('register') }}">| Crear cuenta</a>
         </div>
+
+        <p id="forgot-password-message" style="display:none; color:red; font-size:0.95em; margin-top:10px;">
+            Contacta con un administrador.
+        </p>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var link = document.getElementById('forgot-password-link');
+        var message = document.getElementById('forgot-password-message');
+
+        if (link && message) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                message.style.display = 'block';
+            });
+        }
+    });
+</script>
 @endsection
