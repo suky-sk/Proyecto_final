@@ -29,7 +29,7 @@
     .car-price { font-size: 2em; color: var(--red); font-weight: bold; margin-top: 10px; display: block; }
 
     /* Caja gris de descripción */
-    .car-desc { background: #222; padding: 25px; border-radius: 8px; line-height: 1.6; color: #ddd; white-space: pre-line; }
+    .car-desc { background: #0f172a; padding: 25px; border-radius: 8px; line-height: 1.6; color: #ddd; white-space: pre-line; }
 
     /* especificaciones */
     .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; text-align: center; }

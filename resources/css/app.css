@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
-:root { --bg: #0f1015; --card: #1b1c24; --red: #ff3b30; --red-h: #d63026; --text: #fff; --muted: #a0a0a0; --border: #333; }
+:root { --bg: #0f1015; --card: #1b1c24; --red: #ff3b30; --red-h: #d63026; --yellow: #f1c40f; --yellow-h: #d4ac0d; --text: #fff; --muted: #a0a0a0; --border: #333; }
 
 /* css en general */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
@@ -19,7 +19,7 @@ header { background: var(--card); padding: 15px 30px; display: flex; justify-con
 input, select { background: #0b0c10; border: 1px solid var(--border); color: var(--text); padding: 10px; border-radius: 4px; outline: none; width: 100%; }
 input:focus, select:focus { border-color: var(--red); }
 .search-bar { display: flex; gap: 5px; }
-.search-bar button { background: var(--red); border: none; color: #fff; padding: 0 15px; border-radius: 4px; cursor: pointer; }
+.search-bar button { background: var(--yellow); border: none; color: #000; padding: 0 15px; border-radius: 4px; cursor: pointer; }
 
 /* conmtenedores para el logeo, registrar y perfil */
 .login-box, .modal-box, .profile-container { background: var(--card); padding: 30px; border-radius: 8px; width: 100%; 
@@ -30,9 +30,9 @@ h2, h3, .section-title { text-align: center; margin-bottom: 20px; font-weight: 7
 label { display: block; margin: 10px 0 5px; color: var(--muted); font-size: 0.9em; }
 
 /* botones */
-.btn-submit, .btn-sport, .btn-buy, .btn-pay, .btn-dark { background: var(--red); color: #fff; border: none; padding: 10px 20px; font-weight: 700; 
+.btn-submit, .btn-sport, .btn-buy, .btn-pay, .btn-dark { background: var(--yellow); color: #000; border: none; padding: 10px 20px; font-weight: 700; 
     text-transform: uppercase; cursor: pointer; border-radius: 4px; display: inline-block; text-align: center; width: 100%; transition: background 0.2s; }
-.btn-submit:hover, .btn-sport:hover, .btn-buy:hover, .btn-dark:hover { background: var(--red-h); }
+.btn-submit:hover, .btn-sport:hover, .btn-buy:hover, .btn-pay:hover, .btn-dark:hover { background: var(--yellow-h); }
 .btn-buy { margin-top: 10px; font-size: 0.9em; }
 
 /* tablas de admin */
@@ -60,4 +60,4 @@ label { display: block; margin: 10px 0 5px; color: var(--muted); font-size: 0.9e
 .card { background-color: var(--card) !important; border: 1px solid var(--border) !important; color: var(--text); }
 .text-primary { color: var(--red) !important; }
 .text-muted { color: var(--muted) !important; }
-.btn-dark { background-color: var(--red); border: none; }
+.btn-dark { background-color: var(--yellow); color: #000; border: none; }
