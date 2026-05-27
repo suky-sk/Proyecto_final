@@ -47,7 +47,7 @@ label { display: block; margin: 10px 0 5px; color: var(--muted); font-size: 0.9e
     display: flex; flex-direction: column; justify-content: space-between; }
 .car-card img { width: 100%; height: 160px; -o-object-fit: cover; object-fit: cover; border-radius: 4px; margin-bottom: 10px; }
 .car-info h3 { font-size: 1.1em; margin-bottom: 5px; }
-.car-info .price { color: var(--red); font-size: 1.2em; font-weight: 700; }
+.car-info .price { color: var(--yellow); font-size: 1.2em; font-weight: 700; }
 .car-info .stock { color: var(--muted); font-size: 0.9em; margin-bottom: 10px; }
 
 /* overlay */
@@ -58,6 +58,6 @@ label { display: block; margin: 10px 0 5px; color: var(--muted); font-size: 0.9e
 
 /* forzar los colores oscuros para evitar ver cosas raras */
 .card { background-color: var(--card) !important; border: 1px solid var(--border) !important; color: var(--text); }
-.text-primary { color: var(--red) !important; }
+.text-primary { color: var(--yellow) !important; }
 .text-muted { color: var(--muted) !important; }
 .btn-dark { background-color: var(--yellow); color: #000; border: none; }

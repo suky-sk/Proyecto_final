@@ -40,7 +40,7 @@
                             </div>
 
                             <div class="text-end" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
-                                <h4 style="color: var(--red); margin: 0;">{{ number_format($detalles['precio'] * $detalles['cantidad'], 0, ',', '.') }} €</h4>
+                                <h4 style="color: var(--yellow); margin: 0;">{{ number_format($detalles['precio'] * $detalles['cantidad'], 0, ',', '.') }} €</h4>
 
                                 {{-- form para borrar coches ne caso de que ya no los quieras --}}
                                 <form action="{{ route('carrito.remove', $id) }}" method="POST">
@@ -75,7 +75,7 @@
                     <h4 style="margin-bottom: 20px;">Resumen</h4>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
                         <span>Total:</span>
-                        <span style="color: var(--red); font-size: 1.5rem; font-weight: bold;">{{ number_format($total, 0, ',', '.') }} €</span>
+                        <span style="color: var(--yellow); font-size: 1.5rem; font-weight: bold;">{{ number_format($total, 0, ',', '.') }} €</span>
                     </div>
 
                     @if(session('carrito') && count(session('carrito')) > 0)
