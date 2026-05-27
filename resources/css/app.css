@@ -33,6 +33,9 @@ label { display: block; margin: 10px 0 5px; color: var(--muted); font-size: 0.95
 .login-links { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 16px; font-size: 0.95em; }
 .login-links a { color: var(--muted); transition: color 0.2s; }
 .login-links a:hover { color: #fff; }
+.login-links.login-switch { justify-content: center; gap: 12px; }
+.login-links.login-switch span { color: var(--muted); }
+.login-links.login-switch-separator { display: inline-block; width: 1px; height: 18px; background: var(--border); }
 
 /* botones */
 .btn-submit, .btn-sport, .btn-buy, .btn-pay, .btn-dark { background: linear-gradient(135deg, #ff3b30, #ff6b56); color: #fff; border: none; padding: 14px 24px; font-weight: 700; 
