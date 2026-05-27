@@ -9,6 +9,17 @@
         <form action="{{ route('register.submit') }}" method="POST">
             @csrf
 
+            @if ($errors->any())
+                <div style="color: #fff; background: #b80d0d; padding: 14px 16px; border-radius: 8px; margin-bottom: 16px;">
+                    <strong>Algo ha fallado.</strong> Revisa los datos e inténtalo de nuevo.
+                    <ul style="margin: 8px 0 0 18px; padding: 0; list-style: disc; font-size: 0.95em;">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <div style="display: flex; gap: 10px;">
                 <input type="text" name="nombre" placeholder="Nombre" required value="{{ old('nombre') }}"> {{-- nombre --}}
                 <input type="text" name="apellido" placeholder="Apellido" required value="{{ old('apellido') }}"> {{-- apellido --}}
@@ -21,21 +32,12 @@
             <input type="password" name="password_confirmation" placeholder="Confirmar Contraseña" required> {{-- verifica contraseña --}}
 
             <button type="submit" class="btn-submit">REGISTRARSE</button>
-
-            @if ($errors->any())
-                <div style="color: red; margin-top: 15px; font-size: 0.9em; text-align: left; background: #ffe6e6; padding: 10px; border-radius: 5px;">
-                    <ul style="list-style: none; padding: 0;">
-                        @foreach ($errors->all() as $error)
-                            <li> {{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
         </form>
 
-        <div class="login-links">
-            <p>¿Tienes cuenta?</p>
-            <a href="{{ route('login') }}">Inicia Sesión aquí</a>
+        <div class="login-links login-switch">
+            <span>¿Ya tienes cuenta?</span>
+            <span class="login-switch-separator"></span>
+            <a href="{{ route('login') }}">Inicia sesión aquí</a>
         </div>
     </div>
 </section>
