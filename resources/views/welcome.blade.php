@@ -6,11 +6,23 @@
 <style>
     .catalogo-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 24px;
         padding: 20px 20px;
         max-width: 1400px;
         margin: 0 auto;
+    }
+
+    @media (max-width: 1050px) {
+        .catalogo-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 700px) {
+        .catalogo-container {
+            grid-template-columns: 1fr;
+        }
     }
 
     .filter-toolbar {
