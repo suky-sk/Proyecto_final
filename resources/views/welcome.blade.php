@@ -248,17 +248,6 @@
         </select>
     </label>
 
-    <label class="filter-pill">
-        Combustible
-        <select name="combustible">
-            <option value="">Cualquiera</option>
-            <option value="Gasolina" {{ request('combustible') == 'Gasolina' ? 'selected' : '' }}>Gasolina</option>
-            <option value="Diésel" {{ request('combustible') == 'Diésel' ? 'selected' : '' }}>Diésel</option>
-            <option value="Eléctrico" {{ request('combustible') == 'Eléctrico' ? 'selected' : '' }}>Eléctrico</option>
-            <option value="Híbrido" {{ request('combustible') == 'Híbrido' ? 'selected' : '' }}>Híbrido</option>
-        </select>
-    </label>
-
     <div class="filter-search">
         <span class="filter-search-icon">🔍</span>
         <input type="text" name="modelo" placeholder="Buscar marca o modelo..." value="{{ request('modelo') }}" />
