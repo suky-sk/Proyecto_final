@@ -60,8 +60,92 @@
         @yield('content')
     </main>
 
-    <footer style="padding:12px 20px; text-align:center; color: #666; border-top:1px solid rgba(0,0,0,0.06); margin-top:40px;">
-        &copy; {{ date('Y') }} Proyecto Final DAW
+    <footer class="site-footer">
+        <div class="site-footer__container">
+            <section class="site-footer__main" aria-label="Informacion de Vorya">
+                <div class="site-footer__column site-footer__brand">
+                    <h2 class="site-footer__title">Vorya</h2>
+                    <p class="site-footer__description">
+                        Catalogo de vehiculos seleccionados para encontrar, comparar y comprar tu proximo coche con confianza.
+                    </p>
+                </div>
+
+                <address class="site-footer__column site-footer__contact">
+                    <h3 class="site-footer__heading">Contacto</h3>
+                    <ul class="site-footer__list">
+                        <li class="site-footer__item">
+                            <span class="site-footer__label">Telefono</span>
+                            <a href="tel:+34900123456" class="site-footer__link">+34 900 123 456</a>
+                        </li>
+                        <li class="site-footer__item">
+                            <span class="site-footer__label">Correo</span>
+                            <a href="mailto:contacto@vorya.com" class="site-footer__link">contacto@vorya.com</a>
+                        </li>
+                        <li class="site-footer__item">
+                            <span class="site-footer__label">Horario</span>
+                            <span class="site-footer__text">Lunes a viernes, 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </address>
+
+                <address class="site-footer__column site-footer__location">
+                    <h3 class="site-footer__heading">Ubicacion</h3>
+                    <p class="site-footer__text">Barcelona, Espana</p>
+                    <p class="site-footer__text">Carrer de la Automocion 24, 08018 Barcelona</p>
+                    <a href="#" class="site-footer__link">Ver ubicacion</a>
+                </address>
+
+                <nav class="site-footer__column site-footer__nav" aria-label="Enlaces rapidos">
+                    <h3 class="site-footer__heading">Enlaces rapidos</h3>
+                    <ul class="site-footer__list">
+                        <li class="site-footer__item"><a href="{{ route('home') }}" class="site-footer__link">Inicio</a></li>
+                        <li class="site-footer__item"><a href="{{ route('home') }}#catalogo" class="site-footer__link">Catalogo</a></li>
+                        <li class="site-footer__item"><a href="{{ route('cart') }}" class="site-footer__link">Carrito</a></li>
+                        @guest
+                            <li class="site-footer__item"><a href="{{ route('login') }}" class="site-footer__link">Iniciar sesion</a></li>
+                        @endguest
+                        @auth
+                            <li class="site-footer__item"><a href="{{ route('profile') }}" class="site-footer__link">Mi perfil</a></li>
+                            @if(Auth::user()->es_admin)
+                                <li class="site-footer__item"><a href="{{ route('admin.usuarios.index') }}" class="site-footer__link">Panel admin</a></li>
+                            @endif
+                        @endauth
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="site-footer__trust" aria-label="Garantias de confianza">
+                <ul class="site-footer__badges">
+                    <li class="site-footer__badge">Compra segura</li>
+                    <li class="site-footer__badge">Vehiculos revisados</li>
+                    <li class="site-footer__badge">Atencion personalizada</li>
+                </ul>
+            </section>
+
+            <section class="site-footer__bottom" aria-label="Informacion legal y redes sociales">
+                <p class="site-footer__copyright">
+                    &copy; {{ date('Y') }} Vorya. Todos los derechos reservados.
+                </p>
+
+                <nav class="site-footer__legal" aria-label="Enlaces legales">
+                    <ul class="site-footer__legal-list">
+                        <li class="site-footer__legal-item"><a href="#" class="site-footer__link">Aviso legal</a></li>
+                        <li class="site-footer__legal-item"><a href="#" class="site-footer__link">Privacidad</a></li>
+                        <li class="site-footer__legal-item"><a href="#" class="site-footer__link">Cookies</a></li>
+                        <li class="site-footer__legal-item"><a href="#" class="site-footer__link">Condiciones de compra</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="site-footer__social" aria-label="Redes sociales">
+                    <ul class="site-footer__social-list">
+                        <li class="site-footer__social-item"><a href="#" class="site-footer__link">Instagram</a></li>
+                        <li class="site-footer__social-item"><a href="#" class="site-footer__link">X</a></li>
+                        <li class="site-footer__social-item"><a href="#" class="site-footer__link">LinkedIn</a></li>
+                        <li class="site-footer__social-item"><a href="#" class="site-footer__link">YouTube</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
     </footer>
 
 </body>

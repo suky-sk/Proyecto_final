@@ -10,6 +10,8 @@
     }
 
     /* ft */
+    .back-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: #f1c40f; border: 1px solid rgba(241,196,15,0.45); padding: 10px 16px; border-radius: 4px; font-weight: 700; }
+    .back-link:hover { background: #f1c40f; color: #000; }
     .image-gallery {position: relative; width: 100%;}
     .main-image {width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; background: #000; box-shadow: 0 4px 15px rgba(0,0,0,0.5);}
     .btn-nav {position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 2em; z-index: 10; border-radius: 4px;}
@@ -26,10 +28,10 @@
     .car-header { border-bottom: 1px solid #333; padding-bottom: 20px; }
     .car-brand { text-transform: uppercase; letter-spacing: 2px; color: #aaa; font-weight: bold;}
     .car-title { font-size: 2.5em; margin: 5px 0; color: white; }
-    .car-price { font-size: 2em; color: var(--red); font-weight: bold; margin-top: 10px; display: block; }
+    .car-price { font-size: 2em; color: var(--yellow); font-weight: bold; margin-top: 10px; display: block; }
 
     /* Caja gris de descripción */
-    .car-desc { background: #222; padding: 25px; border-radius: 8px; line-height: 1.6; color: #ddd; white-space: pre-line; }
+    .car-desc { background: #0f172a; padding: 25px; border-radius: 8px; line-height: 1.6; color: #ddd; white-space: pre-line; }
 
     /* especificaciones */
     .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; text-align: center; }
@@ -50,6 +52,9 @@
 </style>
 
 <div class="detail-container">
+    <a href="{{ route('home') }}" class="back-link" onclick="if (document.referrer) { history.back(); return false; }">
+        &larr; Volver
+    </a>
 
     {{-- ft--}}
     <div class="image-gallery">

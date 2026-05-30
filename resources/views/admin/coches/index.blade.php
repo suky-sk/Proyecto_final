@@ -53,7 +53,7 @@
 
                     <td style="color: #aaa;">{{ $coche->potencia }} CV</td>
 
-                    <td style="color: var(--red); font-weight:bold;">{{ number_format($coche->precio, 0, ',', '.') }} €</td>
+                    <td style="color: var(--yellow); font-weight:bold;">{{ number_format($coche->precio, 0, ',', '.') }} €</td>
                     <td>{{ $coche->stock }}</td>
                     <td>{{ $coche->fecha_fabricacion }}</td>
                     <td style="display: flex; gap: 10px;">

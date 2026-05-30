@@ -113,7 +113,7 @@
                             <small>{{ $coche->pivot->created_at->format('H:i') }}h</small>
                         </td>
                         <td style="padding: 15px; font-weight: bold;">{{ $coche->pivot->cantidad }}</td>
-                        <td style="padding: 15px; color: var(--red); font-weight: bold; font-size: 1.1em;">
+                        <td style="padding: 15px; color: var(--yellow); font-weight: bold; font-size: 1.1em;">
                             {{ number_format($coche->precio * $coche->pivot->cantidad, 0, ',', '.') }} €
                         </td>
                     </tr>

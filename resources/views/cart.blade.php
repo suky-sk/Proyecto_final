@@ -3,8 +3,9 @@
 
 @section('content')
 <style>
-    .btn-comprar-rojo {background-color: #dc3545;color: white;border: none;padding: 15px;font-weight: bold;
+    .btn-comprar-rojo {background-color: #f1c40f;color: black;border: none;padding: 15px;font-weight: bold;
         text-transform: uppercase;transition: background-color 0.3s ease, transform 0.2; width: 100%;}
+    .btn-comprar-rojo:hover {background-color: #d4ac0d;}
     .btn-eliminar {color: #ff3b30; background: none; border: 1px solid #333; padding: 5px 10px;
         font-size: 0.75rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;}
     .btn-eliminar:hover {background: #ff3b30; color: white; border-color: #ff3b30;}
@@ -39,7 +40,7 @@
                             </div>
 
                             <div class="text-end" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
-                                <h4 style="color: var(--red); margin: 0;">{{ number_format($detalles['precio'] * $detalles['cantidad'], 0, ',', '.') }} €</h4>
+                                <h4 style="color: var(--yellow); margin: 0;">{{ number_format($detalles['precio'] * $detalles['cantidad'], 0, ',', '.') }} €</h4>
 
                                 {{-- form para borrar coches ne caso de que ya no los quieras --}}
                                 <form action="{{ route('carrito.remove', $id) }}" method="POST">
@@ -74,7 +75,7 @@
                     <h4 style="margin-bottom: 20px;">Resumen</h4>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
                         <span>Total:</span>
-                        <span style="color: var(--red); font-size: 1.5rem; font-weight: bold;">{{ number_format($total, 0, ',', '.') }} €</span>
+                        <span style="color: var(--yellow); font-size: 1.5rem; font-weight: bold;">{{ number_format($total, 0, ',', '.') }} €</span>
                     </div>
 
                     @if(session('carrito') && count(session('carrito')) > 0)
