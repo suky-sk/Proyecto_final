@@ -4,6 +4,10 @@
 @section('content')
 <section id="profile" class="active-section" style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
 
+    <a href="{{ route('home') }}#catalogo" class="back-link">
+        &larr; Volver al catálogo
+    </a>
+
     @if(session('success'))
         <div style="margin: 0 auto 20px; background: rgba(46, 204, 113, 0.2); border: 1px solid #2ecc71; color: #2ecc71; padding: 15px; border-radius: 4px; text-align: center;">
              {{ session('success') }}
@@ -40,14 +44,14 @@
             </div>
         </div>
 
-        <div style="display: flex; justify-content: center; gap: 20px;">
-            <button onclick="openModal()" class="btn-buy" style="width: auto; background: #007bff; border: none;">
-                ✏️ Editar mis datos
+        <div class="profile-actions">
+            <button type="button" onclick="openModal()" class="profile-action-button edit">
+                Editar mis datos
             </button>
 
-            <form action="{{ route('logout') }}" method="POST" style="margin: 0;">
+            <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit" class="btn-logout" style="padding: 10px 20px; cursor: pointer;">Cerrar Sesión</button>
+                <button type="submit" class="profile-action-button logout">Cerrar sesión</button>
             </form>
         </div>
     </div>
@@ -100,8 +104,9 @@
                     @foreach(Auth::user()->coches as $coche)
                     <tr style="background: var(--card); border-radius: 8px;">
                         <td style="padding: 15px; display: flex; align-items: center; gap: 15px;">
-                            <img src="{{ asset('storage/Fotos/' . $coche->imagen_path . '/1.png') }}"
+                            <img src="{{ asset('storage/Fotos/' . $coche->id . '/1.png') }}"
                                  alt="Foto coche"
+                                 onerror="this.onerror=null; this.src='https://via.placeholder.com/800x500?text=Sin+Foto'"
                                  style="width: 80px; height: 50px; object-fit: cover; border-radius: 4px;">
                             <div>
                                 <span style="display: block; font-weight: bold; color: white;">{{ $coche->marca->nombre }}</span>

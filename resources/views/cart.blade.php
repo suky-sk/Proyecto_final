@@ -36,8 +36,9 @@
                     @foreach(session('carrito') as $id => $detalles)
                         <div class="product-preview mb-3" style="background: var(--card); border: 1px solid var(--border); padding: 15px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px;">
                             <div style="display: flex; align-items: center;">
-                                 <img src="{{ asset('storage/Fotos/' . $detalles['imagen_path'] . '/1.png') }}"
+                                 <img src="{{ asset('storage/Fotos/' . $id . '/1.png') }}"
                                     alt="{{ $detalles['modelo'] }}"
+                                    onerror="this.onerror=null; this.src='https://via.placeholder.com/800x500?text=Sin+Foto'"
                                     style="width: 120px; height: 80px; object-fit: cover; margin-right: 15px; border-radius: 4px;">
                                 <div>
                                     <h5 class="mb-0 text-uppercase" style="color: var(--text);">{{ $detalles['marca'] }} {{ $detalles['modelo'] }}</h5>
@@ -87,7 +88,7 @@
                         <form action="{{ route('carrito.comprar') }}" method="POST">
                             @csrf
                             <button type="submit" class="btn-comprar-rojo">
-                                🍎Pay
+                                Finalizar compra
                             </button>
                         </form>
                     @endif

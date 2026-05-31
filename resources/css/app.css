@@ -69,6 +69,80 @@ label { display: block; margin: 10px 0 5px; color: var(--muted); font-size: 0.95
 .btn-submit:hover, .btn-sport:hover, .btn-buy:hover, .btn-pay:hover, .btn-dark:hover { background: var(--yellow-h); transform: translateY(-1px); box-shadow: 0 16px 30px rgba(241, 196, 15, 0.22); }
 .btn-submit:active, .btn-sport:active, .btn-buy:active, .btn-pay:active, .btn-dark:active { transform: translateY(0); }
 .btn-buy { margin-top: 10px; font-size: 0.95em; }
+
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.profile-actions form {
+    margin: 0;
+    display: flex;
+}
+
+.profile-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+    white-space: nowrap;
+}
+
+.profile-action-button:hover {
+    transform: translateY(-1px);
+}
+
+.profile-action-button.edit {
+    background: #fff;
+    color: #0d1433;
+}
+
+.profile-action-button.edit:hover {
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.profile-action-button.logout {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.profile-action-button.logout:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f1c40f;
+    border: 1px solid rgba(241, 196, 15, 0.45);
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.back-link:hover {
+    background: #f1c40f;
+    color: #000;
+}
+
 .admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 .admin-table th { text-align: left; color: var(--muted); padding: 12px; border-bottom: 2px solid var(--border); }
 .admin-table td { padding: 12px; border-bottom: 1px solid #2a2a2a; }
