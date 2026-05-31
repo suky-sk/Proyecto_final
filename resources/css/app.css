@@ -76,9 +76,10 @@ label { display: block; margin: 10px 0 5px; color: var(--muted); font-size: 0.95
 
 /* carrusel y tarjetas */
 .carousel-container { display: flex; overflow-x: auto; gap: 20px; padding: 20px 0; }
-.car-card { background: var(--card); min-width: 280px; max-width: 280px; padding: 15px; border-radius: 8px; border: 1px solid var(--border); 
+.car-card { background: var(--card); min-width: 280px; max-width: 280px; padding: 12px 12px 0; border-radius: 8px; border: 1px solid var(--border); 
     display: flex; flex-direction: column; justify-content: space-between; }
-.car-card img { width: 100%; height: 160px; -o-object-fit: cover; object-fit: cover; border-radius: 4px; margin-bottom: 10px; }
+.car-card > a { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 16 / 9; background: #fff; border-radius: 16px; overflow: hidden; }
+.car-card img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .car-info h3 { font-size: 1.1em; margin-bottom: 5px; }
 .car-info .price { color: var(--yellow); font-size: 1.2em; font-weight: 700; }
 .car-info .stock { color: var(--muted); font-size: 0.9em; margin-bottom: 10px; }
