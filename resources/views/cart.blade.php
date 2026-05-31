@@ -3,6 +3,8 @@
 
 @section('content')
 <style>
+    .back-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: #f1c40f; border: 1px solid rgba(241,196,15,0.45); padding: 10px 16px; border-radius: 4px; font-weight: 700; text-decoration: none; margin-bottom: 20px; transition: background 0.2s ease, color 0.2s ease; }
+    .back-link:hover { background: #f1c40f; color: #000; }
     .btn-comprar-rojo {background-color: #f1c40f;color: black;border: none;padding: 15px;font-weight: bold;
         text-transform: uppercase;transition: background-color 0.3s ease, transform 0.2; width: 100%;}
     .btn-comprar-rojo:hover {background-color: #d4ac0d;}
@@ -13,6 +15,10 @@
 
 <section id="cart" class="active" style="display:block; padding: 20px;">
     <div class="container">
+        <a href="{{ route('home') }}" class="back-link" onclick="if (document.referrer) { history.back(); return false; }">
+            &larr; Volver
+        </a>
+
         <h2 class="section-title">Tu Carrito</h2>
 
         @if(session('error'))
@@ -30,8 +36,9 @@
                     @foreach(session('carrito') as $id => $detalles)
                         <div class="product-preview mb-3" style="background: var(--card); border: 1px solid var(--border); padding: 15px; display: flex; align-items: center; justify-content: space-between; border-radius: 8px;">
                             <div style="display: flex; align-items: center;">
-                                 <img src="{{ asset('storage/Fotos/' . $detalles['imagen_path'] . '/1.png') }}"
+                                 <img src="{{ asset('storage/Fotos/' . $id . '/1.png') }}"
                                     alt="{{ $detalles['modelo'] }}"
+                                    onerror="this.onerror=null; this.src='https://via.placeholder.com/800x500?text=Sin+Foto'"
                                     style="width: 120px; height: 80px; object-fit: cover; margin-right: 15px; border-radius: 4px;">
                                 <div>
                                     <h5 class="mb-0 text-uppercase" style="color: var(--text);">{{ $detalles['marca'] }} {{ $detalles['modelo'] }}</h5>
@@ -56,7 +63,6 @@
                 @else
                     <div class="product-preview text-center py-5" style="background: var(--card); border: 1px solid var(--border); border-radius: 8px;">
                         <p style="color: var(--muted);">No tienes ningún coche en el carrito</p>
-                        <a href="{{ route('home') }}" class="btn-submit" style="width: auto; margin-top: 15px; padding: 10px 30px;">Volver al catálogo</a>
                     </div>
                 @endif
             </div>
@@ -82,7 +88,7 @@
                         <form action="{{ route('carrito.comprar') }}" method="POST">
                             @csrf
                             <button type="submit" class="btn-comprar-rojo">
-                                🍎Pay
+                                Finalizar compra
                             </button>
                         </form>
                     @endif

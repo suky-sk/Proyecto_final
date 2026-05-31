@@ -39,13 +39,27 @@
         background: rgba(255,255,255,0.08);
         border: 1px solid rgba(255,255,255,0.12);
         border-radius: 999px;
-        padding: 12px 18px;
+        padding: 6px 14px;
         color: white;
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         min-width: 165px;
+        font-size: 0.9rem;
+        line-height: 1.2;
         transition: border-color .2s ease, background .2s ease;
+    }
+
+    .filter-pill:hover,
+    .filter-search:hover {
+        border-color: rgba(255,255,255,0.2);
+        background: rgba(255,255,255,0.1);
+    }
+
+    .filter-pill:focus-within,
+    .filter-search:focus-within {
+        border-color: rgba(241,196,15,0.35);
+        background: rgba(255,255,255,0.1);
     }
 
     .filter-pill select,
@@ -54,6 +68,11 @@
         border: none;
         color: white;
         min-width: 100px;
+        padding: 2px 0;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        border-radius: 0;
+        width: auto;
     }
 
     .filter-pill select option {
@@ -75,34 +94,43 @@
         min-width: 260px;
         display: flex;
         align-items: center;
-        background: #ffffff;
-        border: 1px solid rgba(0,0,0,0.08);
-        border-radius: 8px;
-        padding: 6px 10px;
-        transition: border-color .2s ease, box-shadow .2s ease;
-        color: #111;
-    }
-
-    .filter-search:hover,
-    .filter-search:focus-within {
-        border-color: #f1c40f;
-        box-shadow: 0 0 0 4px rgba(241,196,15,0.12);
+        gap: 8px;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 999px;
+        padding: 6px 6px 6px 14px;
+        color: white;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        transition: border-color .2s ease, background .2s ease;
     }
 
     .filter-search-icon {
-        margin-right: 10px;
-        font-size: 1rem;
-        color: rgba(0,0,0,0.55);
+        font-size: 0.95rem;
+        color: rgba(255,255,255,0.55);
+        flex-shrink: 0;
     }
 
     .filter-search input {
-        width: 100%;
+        flex: 1;
+        min-width: 0;
         border: none;
         background: transparent;
-        color: #111;
-        padding: 10px;
-        font-size: 1rem;
-        border-radius: 8px;
+        color: white;
+        padding: 2px 0;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        border-radius: 0;
+        width: auto;
+    }
+
+    .filter-search input::placeholder {
+        color: rgba(255,255,255,0.45);
+    }
+
+    .filter-search input:focus {
+        outline: none;
+        box-shadow: none;
     }
 
     .filter-search button {
@@ -110,9 +138,11 @@
         background: #f1c40f;
         color: #0d1433;
         border-radius: 999px;
-        padding: 10px 22px;
+        padding: 6px 16px;
+        font-size: 0.9rem;
         font-weight: 700;
         cursor: pointer;
+        flex-shrink: 0;
         transition: transform .2s ease, background .2s ease;
     }
 
@@ -134,6 +164,7 @@
         background: rgba(15,23,42,0.95);
         box-shadow: 0 18px 50px rgba(0,0,0,0.16);
         transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        padding: 12px 12px 0;
     }
 
     .car-card:hover {
@@ -142,20 +173,34 @@
         box-shadow: 0 30px 70px rgba(0,0,0,0.23);
     }
 
+    .car-card > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #ffffff;
+        border-radius: 16px;
+        line-height: 0;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
     .car-card img {
         width: 100%;
-        height: 240px;
+        height: 100%;
         object-fit: cover;
+        object-position: center;
         display: block;
         transition: transform 0.5s ease;
     }
 
     .car-card:hover img {
-        transform: scale(1.03);
+        transform: scale(1.02);
     }
 
     .car-card-body {
-        padding: 24px;
+        padding: 20px 4px 24px;
         display: flex;
         flex-direction: column;
         gap: 14px;
@@ -191,17 +236,35 @@
         gap: 10px;
         flex-wrap: wrap;
         margin-top: auto;
+        align-items: stretch;
+    }
+
+    .car-actions form {
+        flex: 1 1 140px;
+        margin: 0;
+        display: flex;
     }
 
     .car-action-button {
         flex: 1 1 140px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
         padding: 12px 18px;
         border-radius: 999px;
         font-weight: 700;
         border: none;
         cursor: pointer;
         text-align: center;
+        text-decoration: none;
+        line-height: 1.2;
         transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .car-actions form .car-action-button {
+        width: 100%;
+        flex: 1;
     }
 
     .car-action-button.details {
@@ -227,7 +290,7 @@
 </style>
 
 
-<section class="hero-section" style="background: #0d1433; color: white; padding: 30px 20px;">
+<section class="hero-section" style="background: rgba(15,23,42,0.95); color: white; padding: 30px 20px;">
     <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: left;">
         <p style="margin: 0 0 15px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.85;">Tu próximo coche te espera</p>
         <h1 style="margin: 0 0 15px; font-size: 56px; line-height: 1.05;">Encuentra tu próximo vehículo</h1>
@@ -310,7 +373,7 @@
                         <div class="car-actions">
                             <a href="{{ route('coches.show', $coche->id) }}" class="car-action-button details">Ver detalles</a>
 
-                            <form action="{{ route('carrito.add', $coche->id) }}" method="POST" style="flex: 1 1 140px; margin: 0;">
+                            <form action="{{ route('carrito.add', $coche->id) }}" method="POST">
                                 @csrf
                                 <button type="submit" class="car-action-button cart" {{ $coche->stock <= 0 ? 'disabled' : '' }}>
                                     {{ $coche->stock <= 0 ? 'SIN STOCK' : 'Añadir al carrito' }}
