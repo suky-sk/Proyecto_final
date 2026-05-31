@@ -91,7 +91,6 @@
                 {{ $coche->stock > 0 ? 'AÑADIR AL CARRITO' : 'AGOTADO' }}
             </button>
         </form>
-        <a href="{{ route('home') }}" style="display:block; text-align:center; margin-top:20px; color:#666;">Volver</a>
     </div>
 </div>
 

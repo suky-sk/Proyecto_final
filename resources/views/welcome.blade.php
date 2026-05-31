@@ -227,7 +227,7 @@
 </style>
 
 
-<section class="hero-section" style="background: #0d1433; color: white; padding: 30px 20px;">
+<section class="hero-section" style="background: rgba(15,23,42,0.95); color: white; padding: 30px 20px;">
     <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: left;">
         <p style="margin: 0 0 15px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.85;">Tu próximo coche te espera</p>
         <h1 style="margin: 0 0 15px; font-size: 56px; line-height: 1.05;">Encuentra tu próximo vehículo</h1>
